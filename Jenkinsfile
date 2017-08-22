@@ -3,7 +3,7 @@
 node {
    def mvnHome
    stage('Fetch Code') {
-      git([url: 'https://github.com/johnuceles/reactor.git', branch: 'develop']) 
+      git([url: 'https://github.com/johnuceles/reactor.git', branch: scm.branches[0].name]) 
       mvnHome = tool 'M3'
    }
    stage('Run Tests') {

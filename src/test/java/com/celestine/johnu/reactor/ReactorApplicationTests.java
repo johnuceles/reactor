@@ -12,5 +12,4 @@ public class ReactorApplicationTests {
 	@Test
 	public void contextLoads() {
 	}
-
 }
