@@ -6,14 +6,13 @@ node {
       git([url: 'https://github.com/johnuceles/reactor.git', branch: 'develop']) 
       mvnHome = tool 'M3'
    }
-   stage('Unit Tests') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore clean install"
+   stage('Unit and Integration Tests') {
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore verify"
    }
-   //stage('Integration Tests') {
-   //   sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore verify"
-   //}
-   stage('Results') {
+   stage('Generate Reports') {
       junit '**/target/surefire-reports/TEST-*.xml'
-      archive 'target/*.jar'
+   }
+   stage('Build') {
+      sh "'${mvnHome}/bin/mvn' clean install -DskipTests"
    }
 }
