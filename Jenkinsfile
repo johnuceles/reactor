@@ -7,7 +7,7 @@ node {
       mvnHome = tool 'M3'
    }
    stage('Unit Tests') {
-      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore test
+      sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore test"
    }
    stage('Integration Tests') {
       sh "'${mvnHome}/bin/mvn' -Dmaven.test.failure.ignore verify"
