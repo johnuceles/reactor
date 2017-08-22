@@ -17,4 +17,3 @@ node {
       sh "'${mvnHome}/bin/mvn' install -DskipTests"
    }
 }
-//
