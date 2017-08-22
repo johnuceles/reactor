@@ -16,4 +16,7 @@ node {
    stage('Build') {
       sh "'${mvnHome}/bin/mvn' install -DskipTests"
    }
+   stage('Deploy') {
+      
+   }
 }
