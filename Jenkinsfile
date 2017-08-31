@@ -14,7 +14,7 @@ node {
       archive 'target/*.jar'
    }
    stage('Build') {
-      sh "'${mvnHome}/bin/mvn' install -DskipTests"
+      sh "'${mvnHome}/bin/mvn' clean install -DskipTests"
    }
    stage('Deploy') {
       //add deployment steps here
