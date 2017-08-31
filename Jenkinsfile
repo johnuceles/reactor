@@ -3,7 +3,6 @@
 node {
    def mvnHome
    stage('Fetch Code') {
-      sh 'printenv'
       git([url: 'https://github.com/johnuceles/reactor.git', branch: scm.branches[0].name]) 
       mvnHome = tool 'M3'
    }
