@@ -17,5 +17,13 @@ node {
       sh "'${mvnHome}/bin/mvn' install -DskipTests"
    }
    stage('Deploy') {
+      pushToCloudFoundry(
+    target: 'api.run.pivotal.io',
+    organization: 'reactordev-org',
+    cloudSpace: 'reactordev-space',
+    credentialsId: 'pcf',
+    selfSigned: true, // default value is false
+    pluginTimeout: 240, // default value is 120
+    )
    }
 }
