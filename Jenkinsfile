@@ -17,6 +17,8 @@ node {
       sh "'${mvnHome}/bin/mvn' install -DskipTests"
    }
    stage('Deploy') {
-      //add deployment steps here
+      artifactPath = '/var/lib/jenkins/.m2/repository/com/celestine/johnu/reactor/0.0.1-SNAPSHOT/'
+      sh "'${artifactPath}' cf login -a https://api.run.pivotal.io"
+      cf push -p reactor-0.0.1-SNAPSHOT.jar reactor
    }
 }
