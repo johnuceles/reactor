@@ -19,11 +19,9 @@ node {
    stage('Deploy') {
       pushToCloudFoundry(
     target: 'api.run.pivotal.io',
-    organization: 'reactordev-org',
-    cloudSpace: 'reactordev-space',
-    credentialsId: 'pcf',
-    selfSigned: true, // default value is false
-    pluginTimeout: 240, // default value is 120
-    )
+    organization: 'Reactor',
+    cloudSpace: 'development',
+    credentialsId: 'pcf'
+   )
    }
 }
