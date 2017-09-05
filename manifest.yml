@@ -1,9 +1,7 @@
----
-  ...
-# all applications use these settings and services
-domain: cf-tcpapps.io
-memory: 512M
-instances: 1
-applications:
-- name: reactor
-  buildpack: java_buildpack
+ ---
+  applications:
+  - name: reactor
+    memory: 512M
+    instances: 1
+    random-route: true
+    buildpack: java_buildpack
