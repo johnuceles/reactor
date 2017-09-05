@@ -1,7 +1,11 @@
 ---
+  ...
+# all applications use these settings and services
+domain: cf-tcpapps.io
+memory: 512M
+instances: 1
 applications:
 - name: reactor
-  memory: 512M
-  instances: 1
-  random-route: true
+  host: tock09876
+  path: ./spring-music/build/libs/spring-music.war
   buildpack: java_buildpack
