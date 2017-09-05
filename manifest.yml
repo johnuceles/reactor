@@ -5,4 +5,3 @@ applications:
   instances: 1
   random-route: true
   path: target/reactor-0.0.1-SNAPSHOT.jar
-  buildpack: java_buildpack
