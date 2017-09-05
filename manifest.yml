@@ -1,7 +1,7 @@
 ---
-buildpack: https://github.com/cloudfoundry/java-buildpack.git
 applications:
 - name: reactor
   memory: 512M
   instances: 1
   random-route: true
+  buildpack: java_buildpack
