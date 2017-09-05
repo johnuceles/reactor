@@ -6,6 +6,4 @@ memory: 512M
 instances: 1
 applications:
 - name: reactor
-  host: tock09876
-  path: ./spring-music/build/libs/spring-music.war
   buildpack: java_buildpack
