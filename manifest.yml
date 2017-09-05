@@ -4,4 +4,4 @@ applications:
   memory: 512M
   instances: 1
   random-route: true
-  path: ./reactor-0.0.1-SNAPSHOT.jar
+  path: target/reactor-0.0.1-SNAPSHOT.jar
