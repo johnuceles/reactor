@@ -16,6 +16,7 @@ node {
    stage('Build') {
       sh "'${mvnHome}/bin/mvn' install -DskipTests"
    }
+   /*
    stage('Deploy to QA') {
       pushToCloudFoundry(
     target: 'api.run.pivotal.io',
@@ -24,6 +25,7 @@ node {
     credentialsId: 'pcf'
    )
    }
+   */
    stage('Deploy to Dev') {
       pushToCloudFoundry(
     target: 'api.run.pivotal.io',
