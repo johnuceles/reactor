@@ -1,4 +1,4 @@
----
+----
 applications:
 - name: reactor
   memory: 1024M
