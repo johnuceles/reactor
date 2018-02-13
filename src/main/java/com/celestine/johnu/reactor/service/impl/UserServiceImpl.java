@@ -1,13 +1,12 @@
 package com.celestine.johnu.reactor.service.impl;
 
-import java.util.Optional;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-
 import com.celestine.johnu.reactor.entity.User;
 import com.celestine.johnu.reactor.repository.UserRepository;
 import com.celestine.johnu.reactor.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {
